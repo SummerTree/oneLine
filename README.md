@@ -1,4 +1,5 @@
 oneLine
+
 simple mathematical model testing
 
 It is easy to visualize mathematics with Processing language, however it seems complicated to draw a simple curve with a set of equations and parameters. Like how in super developed human landscapes, finding a normal natural healthy pot of potatoes can be quite a workout! 
@@ -12,11 +13,11 @@ Exploring the possibility of application being “something else”, rather than
 
 Code
 
-  UIPanGestureRecognizer for two boxes. [pink] and [blue]
-  [Timer]in blue active the mathematical drawing in time
-  set the time to be smaller, therefore to have fluid motion. -> scheduledTimerWithTimeInterval: 0.1 
-  standard equation for cardioid curve -> 
-  float ex = r * ((2* cosf(i/M_2_PI + tempT )- cosf(2*(i/M_2_PI + tempT ))));
+    UIPanGestureRecognizer for two boxes. [pink] and [blue]
+    [Timer]in blue active the mathematical drawing in time
+    set the time to be smaller, therefore to have fluid motion. -> scheduledTimerWithTimeInterval: 0.1 
+    standard equation for cardioid curve -> 
+    float ex = r * ((2* cosf(i/M_2_PI + tempT )- cosf(2*(i/M_2_PI + tempT ))));
   
   
   

@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Draw2D.h"
 
 @interface ViewController : UIViewController
 
 @property (strong,nonatomic)UIBezierPath * path;
 @property (strong,nonatomic)CAShapeLayer * layer;
+
 
 //- (IBAction)map:(UIPanGestureRecognizer *)sender;
 @property (strong, nonatomic) IBOutlet UIImageView *mapView;

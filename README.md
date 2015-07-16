@@ -3,6 +3,7 @@ oneLine
 simple mathematical model testing
 
 same drawing models as in Processing.org
+
 <a>http://guangless.com/web/testing_JS2.html </a> pressed the key for connected lines.
 
 It is easy to visualize mathematics with Processing language, however it seems complicated to draw a simple curve with a set of equations and parameters. Like how in super developed human landscapes, finding a normal natural healthy pot of potatoes can be quite a workout! 

@@ -13,12 +13,8 @@
 
 @property (strong,nonatomic)UIBezierPath * path;
 @property (strong,nonatomic)CAShapeLayer * layer;
-
-
-//- (IBAction)map:(UIPanGestureRecognizer *)sender;
 @property (strong, nonatomic) IBOutlet UIImageView *mapView;
 @property (strong, nonatomic) IBOutlet UIImageView *baseView;
-- (IBAction)timer:(NSTimer *)timer;
 
 @property float mapScale;
 @property float ox;
@@ -31,6 +27,7 @@
 @property float currentTimeInSeconds;
 @property float fluidTimer;
 
+- (IBAction)timer:(NSTimer *)timer;
 
 @end
 

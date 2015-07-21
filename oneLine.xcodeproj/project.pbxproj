@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA013CC31B50120100F0BD23 /* o.png in Resources */ = {isa = PBXBuildFile; fileRef = AA013CC21B50120100F0BD23 /* o.png */; };
 		AA37017A1B3B553100BF17FC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3701791B3B553100BF17FC /* main.m */; };
 		AA37017D1B3B553100BF17FC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AA37017C1B3B553100BF17FC /* AppDelegate.m */; };
 		AA3701801B3B553100BF17FC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA37017F1B3B553100BF17FC /* ViewController.m */; };
@@ -16,6 +17,7 @@
 		AA3701941B3B553100BF17FC /* oneLineTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3701931B3B553100BF17FC /* oneLineTests.m */; };
 		AABE36E81B3DC85600B1B4F8 /* Draw2D.m in Sources */ = {isa = PBXBuildFile; fileRef = AABE36E71B3DC85600B1B4F8 /* Draw2D.m */; };
 		AAC706161B418E5E00337D33 /* ConnectedLines.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC706151B418E5E00337D33 /* ConnectedLines.m */; };
+		AAD7B70B1B56B90900967CB5 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AAD7B70A1B56B90900967CB5 /* iTunesArtwork@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AA013CC21B50120100F0BD23 /* o.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = o.png; sourceTree = "<group>"; };
 		AA3701741B3B553100BF17FC /* oneLine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = oneLine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA3701781B3B553100BF17FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA3701791B3B553100BF17FC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -46,6 +49,7 @@
 		AABE36E71B3DC85600B1B4F8 /* Draw2D.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Draw2D.m; sourceTree = "<group>"; };
 		AAC706141B418E5E00337D33 /* ConnectedLines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectedLines.h; sourceTree = "<group>"; };
 		AAC706151B418E5E00337D33 /* ConnectedLines.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectedLines.m; sourceTree = "<group>"; };
+		AAD7B70A1B56B90900967CB5 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +99,10 @@
 				AA37017F1B3B553100BF17FC /* ViewController.m */,
 				AABE36E61B3DC85600B1B4F8 /* Draw2D.h */,
 				AABE36E71B3DC85600B1B4F8 /* Draw2D.m */,
+				AA013CC21B50120100F0BD23 /* o.png */,
 				AA3701811B3B553100BF17FC /* Main.storyboard */,
 				AA3701841B3B553100BF17FC /* Images.xcassets */,
+				AAD7B70A1B56B90900967CB5 /* iTunesArtwork@2x.png */,
 				AA3701861B3B553100BF17FC /* LaunchScreen.xib */,
 				AA3701771B3B553100BF17FC /* Supporting Files */,
 			);
@@ -178,6 +184,7 @@
 				TargetAttributes = {
 					AA3701731B3B553100BF17FC = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 57675254DH;
 					};
 					AA37018C1B3B553100BF17FC = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -210,6 +217,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA3701831B3B553100BF17FC /* Main.storyboard in Resources */,
+				AAD7B70B1B56B90900967CB5 /* iTunesArtwork@2x.png in Resources */,
+				AA013CC31B50120100F0BD23 /* o.png in Resources */,
 				AA3701881B3B553100BF17FC /* LaunchScreen.xib in Resources */,
 				AA3701851B3B553100BF17FC /* Images.xcassets in Resources */,
 			);
@@ -361,7 +370,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = oneLine/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -371,7 +382,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = oneLine/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

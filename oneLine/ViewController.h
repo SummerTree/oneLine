@@ -17,9 +17,9 @@
 
 
 //- (IBAction)map:(UIPanGestureRecognizer *)sender;
-@property (strong, nonatomic) IBOutlet UIImageView *mapView;
-@property (strong, nonatomic) IBOutlet UIImageView *baseView;
-- (IBAction)timer:(NSTimer *)timer;
+//@property (strong, nonatomic) IBOutlet UIImageView *mapView;
+//@property (strong, nonatomic) IBOutlet UIImageView *baseView;
+//- (IBAction)timer:(NSTimer *)timer;
 
 @property float mapScale;
 @property float ox;
@@ -28,9 +28,11 @@
 @property float bs;
 @property float by;
 
-@property (weak, nonatomic)NSTimer *myTimer;
-@property float currentTimeInSeconds;
-@property float fluidTimer;
+//@property (weak, nonatomic)NSTimer *myTimer;
+//@property float currentTimeInSeconds;
+//@property float fluidTimer;
+
+@property (strong, nonatomic) ConnectedLines * passPoint;
 
 @property (strong, nonatomic) IBOutlet ConnectedLines *connectedView;
 

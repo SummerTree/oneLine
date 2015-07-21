@@ -15,45 +15,13 @@
                             <view contentMode="scaleToFill" id="AAz-ko-pu9" userLabel="ConnedtedLIne" customClass="ConnectedLines">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Pm7-1w-TUT" userLabel="base">
-                                        <rect key="frame" x="96" y="377" width="48" height="42"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <gestureRecognizers/>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="QBT-5L-nXs" appends="YES" id="kn8-Df-03A"/>
-                                        </connections>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="p0P-Vy-44d">
-                                        <rect key="frame" x="207" y="0.0" width="56" height="54"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.0" green="0.20000000000000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="TIMER">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="timer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9sk-6x-cTB"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
                                 <color key="backgroundColor" red="0.090196080509999998" green="0.094117656349999995" blue="0.38431376220000002" alpha="1" colorSpace="deviceRGB"/>
                             </view>
-                            <imageView alpha="0.70000000000000007" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="1Vc-FP-eoq" userLabel="visual">
-                                <rect key="frame" x="59" y="342" width="38" height="35"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="nnc-3n-axf" appends="YES" id="HLO-h6-dLl"/>
-                                </connections>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.090196080505847931" green="0.094117656350135803" blue="0.38431376218795776" alpha="1" colorSpace="deviceRGB"/>
                     </view>
                     <connections>
-                        <outlet property="baseView" destination="Pm7-1w-TUT" id="81U-WD-QnR"/>
                         <outlet property="connectedView" destination="AAz-ko-pu9" id="drR-pY-034"/>
-                        <outlet property="mapView" destination="1Vc-FP-eoq" id="yAG-sw-Z4m"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

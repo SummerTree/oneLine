@@ -16,21 +16,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-
-    
-    
-    UIPanGestureRecognizer *panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(moveViewWithGestureRecognizer:)];
-    [self.mapView addGestureRecognizer:panGestureRecognizer];
+ 
     
     
-    UIPanGestureRecognizer *baseRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(baseGesture:)];
-    [self.baseView addGestureRecognizer:baseRecognizer];
+    //UIPanGestureRecognizer *panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(moveViewWithGestureRecognizer:)];
+    //[self.mapView addGestureRecognizer:panGestureRecognizer];
     
-    self.bs = self.baseView.frame.origin.x;
-    self.by = self.baseView.frame.origin.y;
     
-    self.connectedView.thridView = self.baseView;
+//    UIPanGestureRecognizer *baseRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(baseGesture:)];
+//    [self.baseView addGestureRecognizer:baseRecognizer];
+//    
+//    self.bs = self.baseView.frame.origin.x;
+//    self.by = self.baseView.frame.origin.y;
+    
+    //self.connectedView.thridView = self.baseView;
     
     
     self.path = [UIBezierPath bezierPath];
@@ -41,21 +40,28 @@
     
 }
 
+-(void)viewDidAppear:(BOOL)animated{
+    
+    NSNumber *value = [NSNumber numberWithInt:UIInterfaceOrientationPortrait];
+    [[UIDevice currentDevice] setValue:value forKey:@"orientation"];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
-
+/*
 -(void)oneLine{
     
-    //[self creatTimer];
+    //CGPoint passpontX = self.passPoint.bpoint;
+
     
-    NSLog(@"count: %f", self.currentTimeInSeconds);
+    NSLog(@"countTime: %f", self.currentTimeInSeconds);
 
     [self.path removeAllPoints];
     [self.path moveToPoint:CGPointMake(self.ox, self.oy)];
+    //[self.path moveToPoint:CGPointMake(passpontX.x,passpontX.y)];
 
-    //float iv = 3;
-
+    
     float iv = self.mapScale;
 
     float tempT = 0.10 * self.currentTimeInSeconds/M_1_PI;
@@ -75,7 +81,7 @@
 
         //self.connectedView.thridView.center = CGPointMake(ex+self.ox, ey+self.oy)  ;
 
-        //[self.path addLineToPoint:CGPointMake(ex + self.ox, ey+ self.oy)];
+        [self.path addLineToPoint:CGPointMake(ex + self.ox, ey+ self.oy)];
 
     }
 
@@ -130,9 +136,15 @@
         self.currentTimeInSeconds = 0;
     }
     
-    if(self.mapScale!=0){
-        [self oneLine];
+    
+    if(self.mapScale==0){
+
+        self.ox = self.baseView.frame.origin.x;
+        self.oy = self.baseView.frame.origin.y;
+        self.mapScale = [self mapFunction:self.ox :359 :10 :10 :15];
+
     }
+    [self oneLine];
 
     NSLog(@"%f",self.currentTimeInSeconds);
 }
@@ -144,5 +156,6 @@
 
 
 - (IBAction)k:(id)sender {
-}
+}*/
+
 @end

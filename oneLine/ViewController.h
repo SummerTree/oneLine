@@ -14,12 +14,8 @@
 
 @property (strong,nonatomic)UIBezierPath * path;
 @property (strong,nonatomic)CAShapeLayer * layer;
-
-
-//- (IBAction)map:(UIPanGestureRecognizer *)sender;
-//@property (strong, nonatomic) IBOutlet UIImageView *mapView;
-//@property (strong, nonatomic) IBOutlet UIImageView *baseView;
-//- (IBAction)timer:(NSTimer *)timer;
+@property (strong, nonatomic) IBOutlet UIImageView *mapView;
+@property (strong, nonatomic) IBOutlet UIImageView *baseView;
 
 @property float mapScale;
 @property float ox;

@@ -15,6 +15,7 @@
 		AA3701881B3B553100BF17FC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA3701861B3B553100BF17FC /* LaunchScreen.xib */; };
 		AA3701941B3B553100BF17FC /* oneLineTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3701931B3B553100BF17FC /* oneLineTests.m */; };
 		AABE36E81B3DC85600B1B4F8 /* Draw2D.m in Sources */ = {isa = PBXBuildFile; fileRef = AABE36E71B3DC85600B1B4F8 /* Draw2D.m */; };
+		AAC706161B418E5E00337D33 /* ConnectedLines.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC706151B418E5E00337D33 /* ConnectedLines.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,8 @@
 		AA3701931B3B553100BF17FC /* oneLineTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = oneLineTests.m; sourceTree = "<group>"; };
 		AABE36E61B3DC85600B1B4F8 /* Draw2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Draw2D.h; sourceTree = "<group>"; };
 		AABE36E71B3DC85600B1B4F8 /* Draw2D.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Draw2D.m; sourceTree = "<group>"; };
+		AAC706141B418E5E00337D33 /* ConnectedLines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectedLines.h; sourceTree = "<group>"; };
+		AAC706151B418E5E00337D33 /* ConnectedLines.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectedLines.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +89,8 @@
 			children = (
 				AA37017B1B3B553100BF17FC /* AppDelegate.h */,
 				AA37017C1B3B553100BF17FC /* AppDelegate.m */,
+				AAC706141B418E5E00337D33 /* ConnectedLines.h */,
+				AAC706151B418E5E00337D33 /* ConnectedLines.m */,
 				AA37017E1B3B553100BF17FC /* ViewController.h */,
 				AA37017F1B3B553100BF17FC /* ViewController.m */,
 				AABE36E61B3DC85600B1B4F8 /* Draw2D.h */,
@@ -225,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA3701801B3B553100BF17FC /* ViewController.m in Sources */,
+				AAC706161B418E5E00337D33 /* ConnectedLines.m in Sources */,
 				AA37017D1B3B553100BF17FC /* AppDelegate.m in Sources */,
 				AA37017A1B3B553100BF17FC /* main.m in Sources */,
 				AABE36E81B3DC85600B1B4F8 /* Draw2D.m in Sources */,

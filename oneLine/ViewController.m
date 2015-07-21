@@ -27,15 +27,18 @@
     UIPanGestureRecognizer *baseRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(baseGesture:)];
     [self.baseView addGestureRecognizer:baseRecognizer];
     
-    self.bs = baseRecognizer.view.frame.origin.x;
-    self.by = baseRecognizer.view.frame.origin.y;
+    self.bs = self.baseView.frame.origin.x;
+    self.by = self.baseView.frame.origin.y;
+    
+    self.connectedView.thridView = self.baseView;
     
     
     self.path = [UIBezierPath bezierPath];
     self.layer = [CAShapeLayer layer];
     [self.view.layer addSublayer:self.layer];
-    //[self oneLine];
+    
 
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -49,7 +52,7 @@
     NSLog(@"count: %f", self.currentTimeInSeconds);
 
     [self.path removeAllPoints];
-    [self.path moveToPoint:CGPointMake(self.bs, self.by)];
+    [self.path moveToPoint:CGPointMake(self.ox, self.oy)];
 
     //float iv = 3;
 
@@ -57,18 +60,8 @@
 
     float tempT = 0.10 * self.currentTimeInSeconds/M_1_PI;
     
-    float r = 30 * sinf(tempT/(10 * M_2_PI) ) ;
-    //float dash_pattern[]={15.,15.};
-    //CGFloat dash_pattern[]={15.,15.};
+    float r = 30 * cosf(tempT/(10 * M_2_PI) ) ;
 
-
-//    
-//    CGFloat dashes [] = {self.path.lineWidth * 0 , self.path.lineWidth * 2};
-//    NSInteger count = sizeof(dashes)/dashes[0];
-//    [self.path setLineDash: dashes count:count phase:0];
-
-//    float exx;
-//    float eyy;
 
     for ( float i = 1 ; i < 720 ; i = i+ iv){
 
@@ -80,35 +73,32 @@
         
         [self.path addCurveToPoint: CGPointMake(ex+self.ox, ey+self.oy) controlPoint1: CGPointMake(random +self.ox, random2 +self.oy)  controlPoint2: CGPointMake(ex + self.ox, ey+ self.oy)];
 
+        //self.connectedView.thridView.center = CGPointMake(ex+self.ox, ey+self.oy)  ;
 
         //[self.path addLineToPoint:CGPointMake(ex + self.ox, ey+ self.oy)];
 
     }
 
-    //[self.path addLineToPoint:CGPointMake(exx + self.ox, eyy+ self.oy)];
-
-//    [self.layer setLineDashPattern:[NSArray arrayWithObjects:[NSNumber numberWithInt:10],[NSNumber numberWithInt:5],nil]];
-//    self.layer.lineJoin = kCALineJoinMiter;
-//    self.layer.lineDashPhase = 1.0f;
-    
     self.layer.path = self.path.CGPath;
-    self.layer.strokeColor = [UIColor blackColor].CGColor;
-    self.layer.lineWidth = 0.5;
+    self.layer.strokeColor = [UIColor yellowColor].CGColor;
+    self.layer.lineWidth = 0.2;
     self.layer.fillColor = nil;
 
 }
 
 -(void)moveViewWithGestureRecognizer:(UIPanGestureRecognizer *)panGestureRecognizer{
+    
+    CGPoint touchLocation = [panGestureRecognizer locationInView:self.view];
+    self.mapView.center = touchLocation;
 
     self.ox = panGestureRecognizer.view.frame.origin.x;
     self.oy = panGestureRecognizer.view.frame.origin.y;
 
-    CGPoint touchLocation = [panGestureRecognizer locationInView:self.view];
-    self.mapView.center = touchLocation;
+    
+    //self.mapView.center = CGPointMake(self.ox, self.oy);
+    
     NSLog(@" coordinate x = %f; y = %f ", panGestureRecognizer.view.frame.origin.x,panGestureRecognizer.view.frame.origin.y);
-    self.mapScale = [self mapFunction:self.ox :359 :10 :0 :50];
-
-    //[self oneLine];
+    self.mapScale = [self mapFunction:self.ox :359 :10 :10 :15];
 
 }
 
@@ -117,11 +107,10 @@
     self.by = basePan.view.frame.origin.y;
     CGPoint baseLocation = [basePan locationInView:self.view];
     self.baseView.center = baseLocation;
-    //[self oneLine];
 }
 
 -(float)mapFunction: (float) value :(float)low1 :(float)low2 :(float)high1 :(float)high2 {
-        return low2 + (high2 - low2) * (value - low1) / (high1 - low1);
+        return low2 + (high2 - low2) * (value - low1)  / (high1 - low1);
 }
 
 
@@ -154,20 +143,6 @@
 }
 
 
-
-
-//-(void)tryGCD{
-//    
-//    dispatch_queue_t timeQueue = dispatch_queue_create("timeQueue", NULL);
-//    
-//    dispatch_async(timeQueue, ^{
-//        //
-//        dispatch_async(dispatch_get_main_queue(), ^{
-//            //
-//        });
-//        
-//    });
-//}
-
-
+- (IBAction)k:(id)sender {
+}
 @end

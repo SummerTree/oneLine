@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Draw2D.h"
+#import "ConnectedLines.h"
 
 @interface ViewController : UIViewController
 
@@ -30,6 +31,9 @@
 @property (weak, nonatomic)NSTimer *myTimer;
 @property float currentTimeInSeconds;
 @property float fluidTimer;
+
+@property (strong, nonatomic) IBOutlet ConnectedLines *connectedView;
+
 
 
 @end

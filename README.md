@@ -14,9 +14,7 @@ oneLine in space is a mathematical based drawing simulation that meant to be sha
 
 oneLine in space app is an example to migrate "drawing with code" into the platform of iOS environment. It invites designers/artists who work with processing language to try iOS platform. Also, it shows the possibility of visual artists making apps.
   
-same drawing models as in Processing.org
-
-<a>http://guangless.com/web/testing_JS2.html </a> pressed the key for connected lines.
+same drawing models as in Processing.org <a>http://guangless.com/web/testing_JS2.html </a> pressed the key for connected lines.
 
 It is easy to visualize mathematics with Processing language, however it seems complicated to draw a simple curve with a set of equations and parameters with objective C. Like how in super developed human landscapes, finding a normal natural healthy pot of potatoes can be quite a workout! 
 
